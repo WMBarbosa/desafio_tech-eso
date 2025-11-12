@@ -21,8 +21,8 @@ public class UserController {
     private final ComesticService comesticService;
 
     @GetMapping
-    public ResponseEntity<Page<?>> getAllUsers(Pageable pageable) {
-        Page<ComesticDTO> users = comesticService.listNew(pageable);
+    public ResponseEntity<Page<UserDTO>> getAllUsers(Pageable pageable) {
+        Page<UserDTO> users = userService.findAll(pageable);
         return ResponseEntity.ok(users);
     }
 
