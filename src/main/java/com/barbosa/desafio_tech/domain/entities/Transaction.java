@@ -1,6 +1,7 @@
 package com.barbosa.desafio_tech.domain.entities;
 
 import com.barbosa.desafio_tech.domain.entities.enums.Type;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -13,6 +14,7 @@ import java.time.LocalDateTime;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Transaction {
 
     @Id
@@ -21,6 +23,7 @@ public class Transaction {
 
     @ManyToOne(optional = false)
     @JoinColumn(name = "user_id")
+    @JsonIgnoreProperties({"cosmetic", "password", "version", "createdAt"})
     private User user;
 
     @Enumerated(EnumType.STRING)

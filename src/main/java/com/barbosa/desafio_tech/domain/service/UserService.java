@@ -60,7 +60,7 @@ public class UserService {
         return userMapper.toDto(userRepository.save(user));
     }
 
-    @Transactional(propagation = Propagation.SUPPORTS)
+    @Transactional(propagation = Propagation.REQUIRED)
     public void delete(Long id) {
         User user = userRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException(id));
