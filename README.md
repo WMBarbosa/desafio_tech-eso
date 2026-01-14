@@ -1,4 +1,4 @@
-# Desafio Eso 
+# Fortnite Project Api
 
 API REST desenvolvida em Spring Boot para gerenciamento de usuários, cosméticos e transações relacionadas ao Fortnite. Esta aplicação integra com a API pública do Fortnite para buscar informações sobre cosméticos e permite que usuários gerenciem seus perfis, comprem cosméticos e acompanhem suas transações.
 
